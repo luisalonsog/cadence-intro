@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Server",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/.next/server/pages/api/wave1/[address].js",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug server-side",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+        },
+        {
+            "name": "Debug Current Tests",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": [
+                "${workspaceRoot}/node_modules/.bin/jest",
+                "--runInBand",
+                "${relativeFile}"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
